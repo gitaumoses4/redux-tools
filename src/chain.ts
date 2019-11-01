@@ -1,4 +1,4 @@
-import { Action } from '../index';
+import { Action } from '../types';
 import { Reducer } from 'redux';
 
 function chainReducers<T>(initialState: T): ChainReducers {

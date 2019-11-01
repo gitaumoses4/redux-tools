@@ -10,10 +10,12 @@ import {
   SagaFunction,
   StaticReducer,
   WebComponentState,
-} from '../index';
+} from '../types';
 import chainReducers from './chain';
-import { AxiosResponse } from 'axios';
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
 import _ from 'lodash';
+import { AxiosResponse } from 'axios';
 
 export const webComponentState: WebComponentState<any> = {
   fetched: false,
@@ -172,7 +174,7 @@ type GeneratedReducers<T> = {
   [S in keyof T]: T extends BuiltReducer<infer U> ? U : T;
 };
 
-function generateStore<T extends ReducerObject, K extends keyof T>(reducers: T): {
+function generateStore<T extends ReducerObject>(reducers: T): {
   store: ReducersMapObject<GeneratedReducers<T>, any>;
   sagas: IterableIterator<any>[];
 } {

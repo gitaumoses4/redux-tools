@@ -1,27 +1,12 @@
 {
-  "name": "react-tools",
+  "name": "redux-tools",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/axios": "^0.14.0",
-    "@types/jest": "24.0.21",
-    "@types/node": "12.12.4",
-    "@types/react": "16.9.11",
-    "@types/react-dom": "16.9.3",
-    "@typescript-eslint/parser": "^2.6.0",
-    "axios": "^0.19.0",
-    "lodash": "^4.17.15",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0",
-    "redux": "^4.0.4",
-    "redux-saga": "^1.1.1",
-    "typescript": "3.6.4"
+    "lodash": "^4.17.15"
   },
   "scripts": {
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "cross-env NODE_ENV=production tsdx build --format=cjs,esm,umd"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,8 +24,19 @@
     ]
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/jest": "24.0.21",
     "@types/lodash": "^4.14.144",
+    "@types/node": "12.12.4",
+    "@types/react": "16.9.11",
+    "@types/react-dom": "16.9.3",
     "@types/redux": "^3.6.0",
-    "@types/redux-saga": "^0.10.5"
+    "@types/redux-saga": "^0.10.5",
+    "@typescript-eslint/parser": "^2.6.0",
+    "cross-env": "^6.0.3",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.1.1",
+    "tsdx": "^0.11.0",
+    "typescript": "3.6.4"
   }
 }
