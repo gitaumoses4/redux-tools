@@ -173,8 +173,8 @@ type GeneratedReducers<T> = {
 };
 
 function generateStore<T extends ReducerObject, K extends keyof T>(reducers: T): {
-  store: ReducersMapObject<GeneratedReducers<T>, any>,
-  sagas: IterableIterator<any>[]
+  store: ReducersMapObject<GeneratedReducers<T>, any>;
+  sagas: IterableIterator<any>[];
 } {
   const state: any = {};
   const sagas: IterableIterator<any>[] = [];
